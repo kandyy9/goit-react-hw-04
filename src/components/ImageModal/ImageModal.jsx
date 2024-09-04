@@ -8,8 +8,6 @@ export default function ImageModal({ isOpen, onClose, imageData }) {
 
   const {
     urls: { regular: imageUrl },
-    user,
-    likes,
     description,
   } = imageData;
 
