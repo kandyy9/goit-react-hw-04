@@ -2,13 +2,16 @@ import { Formik, Form, Field } from "formik";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import css from "./SearchBar.module.css";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar({ onSearch, setError }) {
   return (
     <header className={css.headerSearch}>
       <Formik
         initialValues={{ query: "" }}
         onSubmit={(values, actions) => {
-          onSearch(values.query);
+          values.query === ""
+            ? setError("Search query cannot be empty!")
+            : onSearch(values.query);
+
           actions.resetForm();
         }}
       >

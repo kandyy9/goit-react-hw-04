@@ -68,7 +68,7 @@ export default function App() {
         onClose={() => toggleModal(null)}
         imageData={selectedImageData}
       />
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} setError={setError} />
       {error ? (
         <ErrorMessage message={error} />
       ) : (
