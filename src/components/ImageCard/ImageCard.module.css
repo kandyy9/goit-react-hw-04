@@ -20,6 +20,7 @@ img {
 }
 
 .imgCard:hover {
+    cursor: zoom-in;
     transform: scale(1.05);
     background-color: rgba(158, 192, 240, 0.705);
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchImages } from "./../../unsplashGalleryAPI";
-import SearchBar from "../SeacrhBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import LoadMoreBtn from "../LoadmoreBtn/LoadMoreBtn";
 import Loader from "../Loader/Loader";
@@ -68,7 +68,7 @@ export default function App() {
         onClose={() => toggleModal(null)}
         imageData={selectedImageData}
       />
-      <SearchBar onSearch={handleSearch} setError={setError} />
+      <SearchBar onSearch={handleSearch} />
       {error ? (
         <ErrorMessage message={error} />
       ) : (

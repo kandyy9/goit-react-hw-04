@@ -1,5 +1,6 @@
 
 .modalOverlay {
+    cursor: zoom-out;
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
@@ -23,3 +24,4 @@
     height: 500px;
     display: block;
 }
+
